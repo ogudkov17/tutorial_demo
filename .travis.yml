@@ -1,4 +1,10 @@
 language: cpp
+compiler:
+  - gcc
+
+before_install:
+  - pip install cpp-coveralls
+  - pip install pyopenssl
 
 script:
 - cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install -DBUILD_TESTS=ON
@@ -13,3 +19,6 @@ addons:
     packages:
       - cmake
       - cmake-data
+
+after_success:
+  - coveralls --gconv-options '\-lp'

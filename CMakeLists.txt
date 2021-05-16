@@ -8,6 +8,8 @@ option(BUILD_TESTS "Build tests" OFF)
 
 project(print)
 
+set(COVERAGE OFF CACHE BOOL "Coverage")
+
 add_library(print STATIC ${CMAKE_CURRENT_SOURCE_DIR}/sources/print.cpp)
 
 target_include_directories(print PUBLIC
@@ -41,6 +43,9 @@ if(BUILD_TESTS)
   add_subdirectory(third-party/gtest)
   file(GLOB ${PROJECT_NAME}_TEST_SOURCES tests/*.cpp)
   add_executable(check ${${PROJECT_NAME}_TEST_SOURCES})
-  target_link_libraries(check ${PROJECT_NAME} gtest_main)
+  target_compile_options(check PRIVATE --coverage)
+  target_link_libraries(check ${PROJECT_NAME} --coverage gtest_main)
   add_test(NAME check COMMAND check)
 endif()
+
+
