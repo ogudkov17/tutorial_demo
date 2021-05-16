@@ -21,4 +21,4 @@ addons:
       - cmake-data
 
 after_success:
-  - coveralls --gcov-options '\-lp'
+  - coveralls --exclude '_.*' --exclude 'third-party' --gcov-options '\-lp'
