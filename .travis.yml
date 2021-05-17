@@ -11,6 +11,8 @@ script:
 - cmake --build _build
 - cmake --build _build --target install
 - cmake --build _build --target test -- ARGS=--verbose
+- cd _build
+- cpack -G "DEB"
 
 addons:
   apt:
@@ -22,3 +24,7 @@ addons:
 
 after_success:
   - coveralls --exclude '_.*' --exclude 'third-party' --gcov-options '\-lp'
+
+artifacts:
+  - path: _build
+    name: print-0.1.0.0-Linux.deb
