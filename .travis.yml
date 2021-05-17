@@ -23,6 +23,6 @@ after_success:
 deploy:
   provider: releases
   file_glob: true
-  file: "_build/print-0.1.0.0-Linux.deb"
+  file: "print-0.1.0.0-Linux.deb"
   api_key:
     secure: Ei+K1t4SdOpfOSJVNSODPz0yVrWtdT7HYRX/FKKqyJZbGy80j2jQOpwiLFqW3klrPG1l5PKWsjl0EPGMicXjtsPHJXFYC7iZ9Ng2Vb4SVm+Wto6iyrrJZgE/m2eCwVggpV05QwYwp2Bm9SFdZWi+zn5Nmhh0mEhlF1d0x/J5oliCUCc9/1kvhuBe8Jfn9nK03kaRYlr54shijcmIPiqF6FpXe5UvknREcmNKY+IegZgp6GUXCnhUv/wgXc/binAdmrA8FgeZIdbTKSm0wmIGhdEZ3L63dzH2O3gMSVj2ZoykRMoY8XWL9SioOGSSv7fZVReatsAfHvjTaKa2O1oVVFG1FtdVRs90swi2WC+lkZGsKOU8VGxJnmEtnP2fLMHGTLKlvxfXodwuoEjXObXQ0+P3re+xeqcSp4Yg5MHq53VzgFT0bP0wOfcTjDB/Jj8xz+ZQCSK6VYjfWynUKZSSOBtCACnWDUQt1zVfURp+sbEMWsAH8f2k0Nwg83lgAbxk38IGBi+fApBVukKePR0VSJcfyXg8W/WzAx/4Om6xfHUunM+WB0JteA0ysP57QF7gGiLl0M2ZRvJxekGdHfuhDX3G2etkcI2fDbw5zfQMICAlXU42XXkXQq++q53190ZwwFYGM5By+2TTiuHOmgHMfVEnPhD0KxsZ3IRg4oLQlWA=
